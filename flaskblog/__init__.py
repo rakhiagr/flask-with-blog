@@ -22,8 +22,6 @@ def create_app(config_class = Config):
 	bcrypt.init_app(app)
 	login_manager.init_app(app)
 	mail.init_app(app)
-	db.create_all()
-	db.session.commit()
 
 	from flaskblog.users.routes import users
 	from flaskblog.posts.routes import posts
